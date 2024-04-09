@@ -18,6 +18,8 @@ public class UsuarioUI {
     public void mostrarMenuUsuarios() {
         int opcion;
         do {
+            System.out.println();
+            System.out.println();
             System.out.println("=== MENÚ DE GESTIÓN DE USUARIOS ===");
             System.out.println("1. Crear nuevo usuario");
             System.out.println("2. Mostrar todos los usuarios");
@@ -56,7 +58,7 @@ public class UsuarioUI {
     }
 
     private void crearUsuario() {
-        System.out.println("=== CREAR NUEVO USUARIO ===");
+
         System.out.print("Ingrese nombre del usuario: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingrese apellido del usuario: ");
@@ -72,7 +74,9 @@ public class UsuarioUI {
     }
 
     private void mostrarTodosLosUsuarios() {
+        System.out.println("------------------------------");
         System.out.println("=== TODOS LOS USUARIOS ===");
+        System.out.println("------------------------------");
         ArrayList<Usuario> todosLosUsuarios = usuarioService.leerTodosUsuarios();
         for (Usuario usuario : todosLosUsuarios) {
             System.out.println(usuario);
@@ -80,7 +84,9 @@ public class UsuarioUI {
     }
 
     private void mostrarUsuarioPorDNI() {
+        System.out.println("------------------------------");
         System.out.println("=== BUSCAR USUARIO POR DNI ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el DNI del usuario a buscar: ");
         long dni = scanner.nextLong();
         scanner.nextLine();
@@ -95,7 +101,9 @@ public class UsuarioUI {
     }
 
     private void actualizarUsuario() {
+        System.out.println("------------------------------");
         System.out.println("=== ACTUALIZAR USUARIO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el DNI del usuario a actualizar: ");
         long dni = scanner.nextLong();
         scanner.nextLine();
@@ -118,7 +126,9 @@ public class UsuarioUI {
     }
 
     private void eliminarUsuario() {
+        System.out.println("------------------------------");
         System.out.println("=== ELIMINAR USUARIO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el DNI del usuario a eliminar: ");
         long dni = scanner.nextLong();
         scanner.nextLine();

@@ -18,10 +18,12 @@ public class BibliotecaIU {
     public void mostrarMenuPrincipal() {
         int opcion;
         do {
+            System.out.println();
+            System.out.println();
             System.out.println("=== MENÚ PRINCIPAL ===");
-            System.out.println("1. Administrar libros");
+            System.out.println("1. Administrar Libros");
             System.out.println("2. Administrar usuarios");
-            System.out.println("3. Administrar préstamos");
+            System.out.println("3. Prestamos/Devolución Libros");
             System.out.println("0. Salir");
             System.out.print("Ingrese su opción: ");
             opcion = scanner.nextInt();

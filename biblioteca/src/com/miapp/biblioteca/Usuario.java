@@ -28,12 +28,12 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", DNI=" + DNI +
-                ", genero='" + genero + '\'' +
-                '}';
+        return
+                "Nombre:" + nombre + "\n"  +
+                "Apellido=" + apellido + "\n"  +
+                "DNI:" + DNI +"\n"  +
+                "Genero:" + genero
+                ;
     }
 
 

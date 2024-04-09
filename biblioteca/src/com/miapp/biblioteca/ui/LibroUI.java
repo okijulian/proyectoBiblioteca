@@ -18,6 +18,8 @@ public class LibroUI {
     public void mostrarMenuLibros() {
         int opcion;
         do {
+            System.out.println();
+            System.out.println();
             System.out.println("=== MENÚ DE GESTIÓN DE LIBROS ===");
             System.out.println("1. Agregar libro");
             System.out.println("2. Actualizar libro");
@@ -70,7 +72,9 @@ public class LibroUI {
     }
 
     private void actualizarLibro() {
+        System.out.println("------------------------------");
         System.out.println("=== ACTUALIZAR LIBRO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el ISBN del libro a actualizar: ");
         String ISBN = scanner.nextLine();
 
@@ -92,7 +96,9 @@ public class LibroUI {
     }
 
     private void eliminarLibro() {
+        System.out.println("------------------------------");
         System.out.println("=== ELIMINAR LIBRO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el ISBN del libro a eliminar: ");
         String ISBN = scanner.nextLine();
 
@@ -106,15 +112,25 @@ public class LibroUI {
     }
 
     private void mostrarTodosLosLibros() {
+        System.out.println("------------------------------");
         System.out.println("=== TODOS LOS LIBROS ===");
+        System.out.println("------------------------------");
         ArrayList<Libro> todosLosLibros = libroService.obtenerTodosLosLibros();
-        for (Libro libro : todosLosLibros) {
-            System.out.println(libro);
+        if (todosLosLibros.isEmpty()) {
+            System.out.println("No hay libros para mostrar");
+        } else {
+            for (Libro libro : todosLosLibros) {
+                System.out.println(libro);
+                System.out.println();
+            }
         }
     }
 
+
     private void buscarLibroPorISBN() {
+        System.out.println("------------------------------");
         System.out.println("=== BUSCAR LIBRO POR ISBN ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el ISBN del libro a buscar: ");
         String ISBN = scanner.nextLine();
 

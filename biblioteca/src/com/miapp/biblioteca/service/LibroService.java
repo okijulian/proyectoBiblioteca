@@ -16,11 +16,16 @@ public class LibroService {
     //funciones o metodos el CRUD
 
     public void crearLibro(String titulo, String autor, String ISBN, String genero) {
+        // Verificar si ya existe un libro con el mismo ISBN
+        if (buscarLibroPorISBN(ISBN) != null) {
+            System.out.println("Ya existe un libro con el mismo ISBN. Verifica el ISBN y vuelve a cargar el libro");
+            return;
+        }
 
+        // Si no hay ningún libro con el mismo ISBN, crear uno nuevo
         Libro nuevoLibro = new Libro(titulo, autor, ISBN, genero);
-
         biblioteca.add(nuevoLibro);
-
+        System.out.println("Libro creado exitosamente.");
     }
 
     public ArrayList<Libro> obtenerTodosLosLibros() {

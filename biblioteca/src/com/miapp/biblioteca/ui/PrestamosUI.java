@@ -24,9 +24,12 @@ public class PrestamosUI {
     public void mostrarMenuPrestamos() {
         int opcion;
         do {
+            System.out.println();
+            System.out.println();
             System.out.println("=== MENÚ DE PRÉSTAMOS DE LIBROS ===");
-            System.out.println("1. Prestar libro");
-            System.out.println("2. Devolver libro");
+            System.out.println("1. Verificar Disponiblidad Libro");
+            System.out.println("2. Prestar libro");
+            System.out.println("3. Devolver libro");
             System.out.println("0. Volver al menú principal");
             System.out.print("Ingrese su opción: ");
             opcion = scanner.nextInt();
@@ -35,7 +38,7 @@ public class PrestamosUI {
             switch (opcion) {
                 case 1:
                     verificarDisponibilidadPorTitulo();
-                break;
+                    break;
                 case 2:
                     prestarLibro();
                     break;
@@ -52,7 +55,9 @@ public class PrestamosUI {
     }
 
     private void prestarLibro() {
+        System.out.println("------------------------------");
         System.out.println("=== PRESTAR LIBRO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el ISBN del libro que desea prestar: ");
         String ISBN = scanner.nextLine();
         Libro libro = libroService.buscarLibroPorISBN(ISBN);
@@ -72,7 +77,9 @@ public class PrestamosUI {
     }
 
     private void devolverLibro() {
+        System.out.println("------------------------------");
         System.out.println("=== DEVOLVER LIBRO ===");
+        System.out.println("------------------------------");
         System.out.print("Ingrese el ISBN del libro que desea devolver: ");
         String ISBN = scanner.nextLine();
         Libro libro = libroService.buscarLibroPorISBN(ISBN);
@@ -92,7 +99,9 @@ public class PrestamosUI {
     }
 
     private void verificarDisponibilidadPorTitulo() {
+        System.out.println("--------------------------------------------");
         System.out.println("=== VERIFICAR DISPONIBILIDAD POR TÍTULO ===");
+        System.out.println("--------------------------------------------");
         System.out.print("Ingrese el título del libro que desea verificar: ");
         String tituloLibro = scanner.nextLine();
 
@@ -108,7 +117,6 @@ public class PrestamosUI {
             System.out.println("No se encontró ningún libro con el título especificado.");
         }
     }
-
 
 
 }
