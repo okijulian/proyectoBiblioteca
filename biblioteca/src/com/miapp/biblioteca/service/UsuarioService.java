@@ -2,15 +2,12 @@ package com.miapp.biblioteca.service;
 import com.miapp.biblioteca.Usuario;
 import java.util.ArrayList;
 public class UsuarioService {
-
-
-
     private  ArrayList<Usuario> usuarios;
-
 
     public UsuarioService(ArrayList<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+
     ///crear nuevo usuario
     public  void crearUsuario(String nombre, String apellido, long DNI, String genero){
         Usuario nuevoUsuario= new Usuario(nombre, apellido,DNI,genero);
@@ -37,5 +34,16 @@ public class UsuarioService {
 
     }
 
+    public void eliminarUsuario(long DNI) {
+        usuarios.removeIf(usuario -> usuario.getDNI() == DNI);
+    }
 
+    public Usuario buscarUsuarioPorDNI(long DNI) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getDNI() == DNI) {
+                return usuario;
+            }
+        }
+        return null;
+    }
 }
