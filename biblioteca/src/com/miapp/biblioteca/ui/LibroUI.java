@@ -27,7 +27,7 @@ public class LibroUI {
             System.out.println("0. Volver al menú principal");
             System.out.print("Ingrese su opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
