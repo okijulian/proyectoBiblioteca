@@ -5,13 +5,11 @@ import com.miapp.biblioteca.Libro;
 import java.util.ArrayList;
 
 public class LibroService {
-
-    //Atributos
+    // Atributo para almacenar la lista de libros
     private ArrayList<Libro> biblioteca;
 
-    // constructor
+    // Constructor que inicializa la lista de libros
     public LibroService(ArrayList<Libro> biblioteca) {
-
         this.biblioteca = biblioteca;
     }
 
@@ -58,6 +56,15 @@ public class LibroService {
        return  null;
     }
 
+
+    public Libro buscarLibroPorTitulo(String tituloLibro) {
+        for (Libro libro : biblioteca) {
+            if (libro.getTitulo().equalsIgnoreCase(tituloLibro)) {
+                return libro;
+            }
+        }
+        return null;
+    }
 }
 
 
