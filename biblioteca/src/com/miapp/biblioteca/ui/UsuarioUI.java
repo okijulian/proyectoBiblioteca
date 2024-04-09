@@ -19,8 +19,8 @@ public class UsuarioUI {
         int opcion;
         do {
             System.out.println();
-            System.out.println();
             System.out.println("=== MENÚ DE GESTIÓN DE USUARIOS ===");
+            System.out.println();
             System.out.println("1. Crear nuevo usuario");
             System.out.println("2. Mostrar todos los usuarios");
             System.out.println("3. Buscar Usuario por DNI");
@@ -80,6 +80,7 @@ public class UsuarioUI {
         ArrayList<Usuario> todosLosUsuarios = usuarioService.leerTodosUsuarios();
         for (Usuario usuario : todosLosUsuarios) {
             System.out.println(usuario);
+            System.out.println("-------------------");
         }
     }
 

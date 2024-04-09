@@ -20,7 +20,10 @@ public class BibliotecaIU {
         do {
             System.out.println();
             System.out.println();
-            System.out.println("=== MENÚ PRINCIPAL ===");
+            System.out.println("------------------------------");
+            System.out.println("======= MENÚ PRINCIPAL =======");
+            System.out.println("------------------------------");
+            System.out.println();
             System.out.println("1. Administrar Libros");
             System.out.println("2. Administrar usuarios");
             System.out.println("3. Prestamos/Devolución Libros");

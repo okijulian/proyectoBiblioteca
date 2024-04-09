@@ -19,8 +19,8 @@ public class LibroUI {
         int opcion;
         do {
             System.out.println();
-            System.out.println();
             System.out.println("=== MENÚ DE GESTIÓN DE LIBROS ===");
+            System.out.println();
             System.out.println("1. Agregar libro");
             System.out.println("2. Actualizar libro");
             System.out.println("3. Eliminar libro");
@@ -121,7 +121,7 @@ public class LibroUI {
         } else {
             for (Libro libro : todosLosLibros) {
                 System.out.println(libro);
-                System.out.println();
+                System.out.println("-------------------");
             }
         }
     }

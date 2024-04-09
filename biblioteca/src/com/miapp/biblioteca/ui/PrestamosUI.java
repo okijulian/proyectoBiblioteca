@@ -25,8 +25,8 @@ public class PrestamosUI {
         int opcion;
         do {
             System.out.println();
-            System.out.println();
             System.out.println("=== MENÚ DE PRÉSTAMOS DE LIBROS ===");
+            System.out.println();
             System.out.println("1. Verificar Disponiblidad Libro");
             System.out.println("2. Prestar libro");
             System.out.println("3. Devolver libro");
